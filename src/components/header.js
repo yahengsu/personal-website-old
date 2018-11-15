@@ -1,13 +1,25 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <div className="header">
-      <Link className="link home" to = "/">YaHeng Su</Link>
-      <Link className="link projects" to="/page-2">Projects</Link>
-      <Link className="link blog" to="/page-2">Blog</Link>
-      <Link className="link contact" to="/page-2">Contact</Link>
-      <Link className="link resume" to="/resume">Resume</Link>
+      <ul>
+        <li>
+          <Link className="link home" to = "/">YaHeng Su</Link>
+        </li>
+        <li>
+          <Link className="link projects" to="/projects">Projects</Link>
+        </li>
+        <li>
+          <Link className="link blog" to="/blog">Blog</Link>
+        </li>
+        <li>
+         <Link className="link contact" to="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link className="link resume" to="/resume.pdf">Resume</Link>
+        </li>
+      </ul>
   </div>
 )
 
