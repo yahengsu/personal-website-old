@@ -1,17 +1,25 @@
 import React from 'react'
 import Layout from '../components/layout'
+import {Link} from 'gatsby'
 
-
-const BlogPage = () => (
+const BlogPage = ({data}) => (
     <Layout>
-        <h1>Hi from the second page</h1>
-        <p>Welcome to page 2</p>
+        <div className="blog-page">
+        <ul>
+            {data.allMarkdownRemark.edges.map(post => (
+                <li className="post">
+                    <h2><Link to={post.node.frontmatter.path} key={post.node.id}>{post.node.frontmatter.title}</Link></h2>
+                    <p className="post-date">{post.node.frontmatter.date}</p>
+                </li>
+            ))}
+        </ul>
+        </div>
     </Layout>
 )
 
 export const pageQuery = graphql`
     query IndexQuery {
-        allMarkdownRemark(limit: 10) {
+        allMarkdownRemark(limit: 5) {
             edges {
                 node {
                     frontmatter {

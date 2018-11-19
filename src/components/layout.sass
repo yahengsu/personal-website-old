@@ -3,49 +3,54 @@ html
   font-family: 'Montserrat', sans-serif
   -ms-text-size-adjust: 100%
   -webkit-text-size-adjust: 100%
+  line-height: 1.5
+  font-size: 18px
+  text-rendering: optimizeLegibility
+  min-height: 50vh
 
 body 
   margin: 0
   background: #fff
 
 .header
-  background: beige
+  background: white//#EEEEEE
   height: auto
+  padding: 0.5rem
+  max-width: 75%
   text-align: center
-  padding: 1rem
-  width: 100%
+  margin: 0 auto
+  border-bottom: 1px solid #CCCCCC
   ul
-    justify-content: center
+    display: inline-block
     padding: 1rem 0
-    align-self: center
-    margin: 0
+    margin: 0 auto
   li
     display: inline-block
     text-align: center
     padding: 0 2rem
+    vertical-align: baseline
   .link
     text-decoration: none
-  .home
-    color: green
-  .projects
-    color: blue
-  .blog
-    color: grey
-  .contact
-    color: orange
-  .resume
-    color: black
+    color: #000000
+  .link:hover
+    color: #5D96EE
   
 .main
-  background: aqua 
+  background: white 
   text-align: left
   width: auto
   height: auto
   max-width: 45rem
-  margin: 3rem auto
+  margin: 0 auto
+  position: relative
+  justify-content: center
+  flex-direction: column
+  display: flex
+  padding: 0 2rem
   .heading
-    font-size: 200%
+    font-size: 2.5rem
     font-weight: 400
+    margin-bottom: 0
   .subHeading
     margin-top: 0.25rem
     font-size: 0.75rem
@@ -57,15 +62,78 @@ body
   a
     color: #5D96EE
     text-decoration: none
+
+.projects-page
+  margin-top: 3rem
+  padding: 0 2rem
+
 .project
-  max-width: 100%
-  display: inline-block
-  .image
-    max-width: 250px
-  .text
-.blogpost
-  width: 100%
   max-width: 45rem
-  text-align: left
+  background: white 
   margin: 0 auto
-  padding: 0 1.5rem
+  display: flex
+  .text
+    a
+      text-decoration: none
+      color: #5D96EE
+    h2
+      margin-bottom: 0
+      font-weight: 400
+    h5
+      margin-top: 0
+      font-style: italic
+      font-weight: 600
+.blogpost
+  max-width: 45rem
+  text-align: center  
+  margin: 0 auto
+  padding: 0 2rem
+  h1
+    font-weight: 400
+    margin-bottom: 0
+    font-size: 2.25rem
+  h5
+    margin-top: 0
+    margin-bottom: 3rem
+    font-weight: 300
+    font-size: 0.8rem
+.blog-page
+   text-align: left
+   margin: 0 auto
+   max-width: 45rem
+   padding: 0 auto
+   ul
+     margin: 3rem 0 0 0
+     padding: 0
+   .post
+      padding: 0.5em 1em
+      text-align: left
+      border-left: 0.5em solid #FFFFFF
+      list-style-type: none
+      -webkit-transition: all 0.3s ease-in
+      transition: all 0.3s ease-in
+      margin: 1rem auto
+      &:hover
+        border-color: #5D96EE
+      h2
+        font-size: 1.75rem
+        padding: 0
+        margin: 0
+        a
+          color: #333333
+          text-decoration: none
+          font-weight: 400
+      p
+        font-weight: 300        
+        font-size: 0.8rem
+        margin: 0
+
+.contact-page
+  margin: 0 auto
+  max-width: 45rem
+  padding: 0 auto
+  h2
+    font-weight: 400
+  a
+    text-decoration: none
+    color: #5D96EE

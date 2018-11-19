@@ -1,19 +1,14 @@
 import React from 'react'
-import Image from './image'
 
-const Project = ({title, description, tools, image}) => (
+const Project = ({title, description, tools, link}) => (
     <div className="project">
-        <section className="image">
-        <Image></Image>
-        </section>
-        <section className="text">
-            <h1>{title}</h1>
+        <div className="text">
+            <a href={link} rel="noopener noreferrer" target="_blank"> <h2>{title}</h2> </a>
+            <h5>{tools}</h5>
             <p>{description}</p>
-            <p>Tools: {tools}</p>
-        </section>
-        
+            
+        </div>
     </div>
-    
 )
 
 export default Project
