@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {Link} from 'gatsby'
+import {graphql} from 'gatsby'
 
 const BlogPage = ({data}) => (
     <Layout>
@@ -19,7 +20,11 @@ const BlogPage = ({data}) => (
 
 export const pageQuery = graphql`
     query IndexQuery {
-        allMarkdownRemark(limit: 5) {
+        allMarkdownRemark(
+            limit: 5
+            sort: { fields: [frontmatter___date], order: DESC}
+            filter: { frontmatter: { published: { eq: true}}}
+        ) {
             edges {
                 node {
                     frontmatter {
